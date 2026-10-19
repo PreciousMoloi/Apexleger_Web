@@ -1,4 +1,4 @@
-https://dash.infinityfree.com/accounts/if0_42829029/domains/apexleger.infinityfree.me
+apexleger.infinityfree.me
 # APEXLedger Web App — Android-aligned build
 
 A responsive, single-shell website built to mirror the Android app's navy/gold branding, dashboard, client service requests, documents, threaded messages and profile. Staff and administration screens are role-aware. It uses the same Firebase project and collection names as the Android app: `apexledger-fc1c9`, `users`, `tickets`, `documents`, `threads/{threadId}/messages`, `notifications`, and `audit_log`.
