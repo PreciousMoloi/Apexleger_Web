@@ -1,4 +1,3 @@
-http://apexleger.infinityfree.me/
 # APEXLedger Web App — Android-aligned build
 
 A responsive, single-shell website built to mirror the Android app's navy/gold branding, dashboard, client service requests, documents, threaded messages and profile. Staff and administration screens are role-aware. It uses the same Firebase project and collection names as the Android app: `apexledger-fc1c9`, `users`, `tickets`, `documents`, `threads/{threadId}/messages`, `notifications`, and `audit_log`.
@@ -29,3 +28,7 @@ A responsive, single-shell website built to mirror the Android app's navy/gold b
 - Security rules must be tested with separate client, accountant and admin test accounts. A query that does not constrain ownership/assignment may be denied even when a user can read individual matching documents.
 - Android currently stores document bytes in Firestore chunks (`documents/{id}/chunks/...`) whereas this web app uses Storage objects. If the two apps must open every uploaded file cross-platform, unify document storage behind one shared implementation before production.
 - Firebase configuration and rules cannot be deployed from this ZIP. Live authentication, permissions, Storage CORS/limits and database compatibility must be tested in your Firebase project.
+
+## Feature parity with the Kotlin app (added)
+
+Registration with tax number, service preference, address and duty-based routing; ticket numbers (TAX-2026-0001); overdue chips; staff internal notes; document preview and staff review with notifications; notification centre; change password; notification preferences; dark mode; Reports (donut, workload, overdue, CSV, print); Admin Control Panel (staff/client management, assignment, activate/deactivate/delete, permissions, audit log, system health); audit logging; 30-minute inactivity logout. Deploy the updated `firestore.rules.example` and test with client, accountant and admin accounts. Deleting a user removes the profile record only; remove the sign-in account in Firebase Authentication.
